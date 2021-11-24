@@ -33,11 +33,11 @@ const EffectComponent = () => {
   };
 
   return (
-    <>
+    <div>
       <h1>Use Effect</h1>
       <button onClick={() => getData()}> Fetch a type of coffee</button>
       <p> {coffeeType} </p>
-    </>
+    </div>
   );
 };
 

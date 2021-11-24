@@ -1,6 +1,10 @@
+import ContextComponent from "./hooksRefreshers/ContextHook";
 import EffectComponent from "./hooksRefreshers/EffectHook";
+import LayoutEffectComponent from "./hooksRefreshers/LayoutEffectHook";
 import ReducerComponent from "./hooksRefreshers/ReducerHook";
+import RefComponent from "./hooksRefreshers/RefHook";
 import StateComponent from "./hooksRefreshers/stateHook";
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import "./styles.css";
 
 export default function App() {
@@ -10,7 +14,9 @@ export default function App() {
       <StateComponent />
       <ReducerComponent />
       <EffectComponent />
-      <h2> end </h2>
+      <RefComponent />
+      <LayoutEffectComponent />
+      <ContextComponent />
     </div>
   );
 }

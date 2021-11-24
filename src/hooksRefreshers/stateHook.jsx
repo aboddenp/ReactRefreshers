@@ -9,7 +9,7 @@ function StateComponent() {
   };
 
   return (
-    <>
+    <div>
       <h1> state </h1>
       <h2>{counter}</h2>
       <button onClick={() => setCounter(counter + 1)}> increment </button>
@@ -19,7 +19,7 @@ function StateComponent() {
         {" "}
         <strong>You just said:</strong> {text}
       </p>
-    </>
+    </div>
   );
 }
 

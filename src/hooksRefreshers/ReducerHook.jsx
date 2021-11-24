@@ -16,7 +16,7 @@ function ReducerComponent() {
   const text = "boop bop beep";
 
   return (
-    <>
+    <div>
       <h1> Reducer </h1>
       <h2>{state.count}</h2>
       <button
@@ -32,7 +32,7 @@ function ReducerComponent() {
         <strong>secret hidden:</strong>
         {state.showText && text}
       </p>
-    </>
+    </div>
   );
 }
 
