@@ -1,13 +1,24 @@
 .App {
   font-family: sans-serif;
   text-align: center;
-  background-color: grey;
+  background-color: mistyrose;
   color: white;
+  margin: 0;
   padding: 10%;
 }
 
 .App > div {
-  background-color: tomato;
+  background-color: salmon;
   padding: 5%;
   margin: 20px 0px;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 23px;
+}
+
+html,
+body {
+  margin: 0;
 }

@@ -1,3 +1,4 @@
+import { TextField } from "@mui/material";
 import { useContext } from "react";
 import { AppContext } from "./ContextHook";
 
@@ -6,8 +7,11 @@ function Login() {
 
   return (
     <>
-      <input
-        type="text"
+      <TextField
+        id="filled-basic"
+        label="controlled"
+        variant="filled"
+        fullWidth
         onChange={(event) => setUsername(event.target.value)}
       />
     </>

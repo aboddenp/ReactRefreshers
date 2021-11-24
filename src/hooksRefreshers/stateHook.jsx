@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 
+import Button from "@mui/material/Button";
+import AddIcon from "@mui/icons-material/Add";
+import TextField from "@mui/material/TextField";
+
 function StateComponent() {
   const [counter, setCounter] = useState(0);
   const [text, setText] = useState("");
@@ -12,9 +16,26 @@ function StateComponent() {
     <div>
       <h1> state </h1>
       <h2>{counter}</h2>
-      <button onClick={() => setCounter(counter + 1)}> increment </button>
+      <Button
+        variant="contained"
+        startIcon={<AddIcon />}
+        color="primary"
+        size="small"
+        sx={{ mb: 3 }}
+        onClick={() => setCounter(counter + 1)}
+      >
+        {" "}
+        increment{" "}
+      </Button>
       <br />
-      <input type="text" onChange={updateText} value={text} />
+      <TextField
+        id="filled-basic"
+        label="controlled"
+        variant="filled"
+        fullWidth
+        onChange={updateText}
+        value={text}
+      />
       <p>
         {" "}
         <strong>You just said:</strong> {text}

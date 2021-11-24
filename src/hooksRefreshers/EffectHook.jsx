@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Button from "@mui/material/Button";
+import CoffeeIcon from "@mui/icons-material/Coffee";
 
 const EffectComponent = () => {
   const [coffeeType, setCoffeeType] = useState("");
@@ -8,7 +10,6 @@ const EffectComponent = () => {
 
   useEffect(() => {
     document.title = coffeeType;
-    console.log(document.title);
     return () => {
       document.title = "x_x";
     };
@@ -23,9 +24,9 @@ const EffectComponent = () => {
     };
     fetch("https://random-data-api.com/api/coffee/random_coffee", options)
       .then((response) => response.json())
-      .then(function (data) {
-        console.log(data.blend_name);
+      .then((data) => {
         setCoffeeType(data.blend_name);
+        return data;
       })
       .catch((error) => {
         console.log("something went wrong " + error);
@@ -35,7 +36,17 @@ const EffectComponent = () => {
   return (
     <div>
       <h1>Use Effect</h1>
-      <button onClick={() => getData()}> Fetch a type of coffee</button>
+      <Button
+        variant="contained"
+        startIcon={<CoffeeIcon />}
+        color="primary"
+        size="small"
+        sx={{ mb: 3 }}
+        onClick={() => getData()}
+      >
+        {" "}
+        Fetch a type of coffee
+      </Button>
       <p> {coffeeType} </p>
     </div>
   );

@@ -1,3 +1,4 @@
+import { TextField } from "@mui/material";
 import React, { useEffect, useLayoutEffect, useRef } from "react";
 
 function LayoutEffectComponent() {
@@ -15,7 +16,15 @@ function LayoutEffectComponent() {
   return (
     <div>
       <h1>use layout effect</h1>
-      <textarea onChange={() => {}} ref={textareaRef} value="Anon" />
+      <TextField
+        id="outlined-multiline-flexible"
+        label="Multiline"
+        multiline
+        maxRows={4}
+        onChange={() => {}}
+        ref={textareaRef}
+        value="Anon"
+      />
     </div>
   );
 }

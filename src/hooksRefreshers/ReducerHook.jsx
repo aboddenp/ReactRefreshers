@@ -1,4 +1,6 @@
 import React, { useReducer } from "react";
+import Button from "@mui/material/Button";
+import AddIcon from "@mui/icons-material/Add";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -16,17 +18,22 @@ function ReducerComponent() {
   const text = "boop bop beep";
 
   return (
-    <div>
+    <div elevation={1}>
       <h1> Reducer </h1>
       <h2>{state.count}</h2>
-      <button
+      <Button
+        variant="contained"
+        startIcon={<AddIcon />}
+        color="primary"
+        size="small"
+        sx={{ mb: 3 }}
         onClick={() => {
           dispatch({ type: "INCREMENT" });
           dispatch({ type: "toggleShowText" });
         }}
       >
         increment and hide
-      </button>
+      </Button>
       <br />
       <p>
         <strong>secret hidden:</strong>

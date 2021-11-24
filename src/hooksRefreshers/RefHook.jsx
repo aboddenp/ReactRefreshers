@@ -1,4 +1,6 @@
 import React, { useState, useRef } from "react";
+import Button from "@mui/material/Button";
+import AddIcon from "@mui/icons-material/Add";
 
 // help manipulate the dom
 function RefComponent() {
@@ -14,7 +16,12 @@ function RefComponent() {
   return (
     <div>
       <h1> use Ref </h1>
-      <button
+      <Button
+        variant="contained"
+        startIcon={<AddIcon />}
+        color="primary"
+        size="small"
+        sx={{ mb: 3 }}
         onClick={() => {
           setName(text);
           inputRef.current.focus();
@@ -22,7 +29,7 @@ function RefComponent() {
       >
         {" "}
         changeName{" "}
-      </button>
+      </Button>
       <br />
       <input type="text" onChange={updateText} value={text} ref={inputRef} />
       <p>{name}</p>
